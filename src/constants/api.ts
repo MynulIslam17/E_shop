@@ -1,0 +1,17 @@
+export const API_ENDPOINTS = {
+  PRODUCTS: "/products",
+  PRODUCT_BY_SLUG: (slug: string) => `/products/${slug}`,
+  COLLECTIONS: "/collections",
+  COLLECTION_BY_SLUG: (slug: string) => `/collections/${slug}`,
+  SEARCH: (query: string) => `/search?q=${encodeURIComponent(query)}`,
+  VALIDATE_COUPON: "/coupons/validate",
+  ORDERS: "/orders",
+  TRACK_ORDER: (orderId: string) => `/orders/${orderId}/track`,
+  VERIFY_PAYMENT: "/payments/verify-request",
+  PRODUCT_REVIEWS: (productId: string) => `/products/${productId}/reviews`,
+  SUBMIT_REVIEW: (token: string) => `/reviews/${token}`,
+  SUBMIT_RETURN: (token: string) => `/returns/${token}`,
+  GET_RETURN_INFO: (token: string) => `/returns/${token}`,
+  GET_INVOICE: (token: string) => `/invoice/${token}`,
+  CONTACT: "/contact",
+} as const;
